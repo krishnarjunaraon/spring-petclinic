@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Docker Build Image') {
             steps {
-               sh 'docker build -t my-image -f Dockerfile .'
+              sudo sh 'docker build -t my-image -f Dockerfile .'
             }
         }
         stage('Login') {
